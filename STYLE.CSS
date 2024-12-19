@@ -1,0 +1,244 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f9f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Kalender */
+
+.calendar-container {
+    margin: 20px auto;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.calendar-header {
+    background-color: #2b6e2b;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    padding: 10px;
+}
+
+.calendar-day {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.calendar-day.header {
+    background-color: #2b6e2b;
+    color: white;
+    font-weight: bold;
+}
+
+.calendar-day.selected {
+    background-color: #c8e6c9;
+    /* Warna tanda untuk tanggal dengan tugas */
+}
+
+.task-count {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #2b6e2b;
+    color: #fff;
+    font-size: 10px;
+    padding: 2px 4px;
+    border-radius: 50%;
+}
+
+
+/* Form Input Tugas */
+
+.todo-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    /* Memastikan form berada di tengah */
+}
+
+.todo-container input,
+.todo-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.todo-container input:focus,
+.todo-container textarea:focus {
+    border-color: #2b6e2b;
+    box-shadow: 0 0 5px rgba(43, 110, 43, 0.6);
+}
+
+.todo-container button {
+    background-color: #2b6e2b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.todo-container button:hover {
+    background-color: #3c8f3c;
+}
+
+.todo-container input[type="date"],
+.todo-container input[type="time"] {
+    width: 45%;
+    margin-right: 10px;
+}
+
+.todo-container textarea {
+    height: 100px;
+}
+
+
+/* Styling untuk ikon di input */
+
+.todo-container input[type="date"],
+.todo-container input[type="time"] {
+    background-image: url('path_to_icon.png');
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    padding-right: 30px;
+}
+
+
+/* Menambahkan Logo UNJ di pojok kanan atas */
+
+.logo-container {
+    position: absolute;
+    top: 10px;
+    /* Jarak dari atas */
+    right: 10px;
+    /* Jarak dari kanan */
+    z-index: 9999;
+    /* Agar logo tetap di atas */
+}
+
+.unj-logo {
+    width: 100px;
+    /* Ukuran logo, bisa disesuaikan */
+    height: auto;
+}
+
+
+/* Tabel Daftar Tugas */
+
+.table-container {
+    margin-top: 30px;
+    padding: 20px;
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table-container th,
+.table-container td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-container th {
+    background-color: #2b6e2b;
+    color: white;
+}
+
+.table-container td {
+    background-color: #f9f9f9;
+}
+
+.table-container tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table-container input[type="checkbox"] {
+    margin-left: 10px;
+}
+
+
+/* Gaya untuk teks "KELOMPOK 9" */
+
+.kelompok {
+    text-align: center;
+    /* Menyelaraskan teks ke tengah */
+    font-size: 24px;
+    /* Ukuran font lebih besar */
+    font-family: 'Poppins', sans-serif;
+    /* Menggunakan font Poppins */
+    font-weight: 1000;
+    /* Menebalkan font */
+    color: #333;
+    /* Warna teks */
+    margin-top: 2px;
+    /* Jarak atas dari kalender */
+    letter-spacing: 4px;
+    /* Menambah jarak antar huruf */
+    text-transform: uppercase;
+    /* Membuat teks kapital */
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    /* Memberikan bayangan pada teks */
+}
+
+
+/* Tombol Kembali ke Kalender */
+
+.button-back {
+    background-color: #2b6e2b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.button-back:hover {
+    background-color: #3c8f3c;
+}

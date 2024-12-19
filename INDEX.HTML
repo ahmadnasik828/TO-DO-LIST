@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalender To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <h1>Kalender To-Do List</h1>
+    </header>
+
+    <div class="kelompok">
+        <p>KELOMPOK 9</p>
+    </div>
+
+    <!-- Kalender -->
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <button onclick="prevMonth()">&#9664;</button>
+            <h2 id="monthYear"></h2>
+            <button onclick="nextMonth()">&#9654;</button>
+        </div>
+        <div class="calendar-grid" id="calendar"></div>
+    </div>
+
+    <div class="logo-container">
+        <img src="images/unj-logo.png" alt="Logo UNJ" class="unj-logo">
+    </div>
+
+
+
+    <!-- Input Tugas -->
+    <div class="todo-container">
+        <input type="text" id="taskTitle" placeholder="Judul tugas...">
+        <textarea id="taskDesc" placeholder="Isi tugas..."></textarea>
+        <input type="date" id="taskDate">
+        <input type="time" id="taskTime">
+        <button onclick="addTask()">Tambah Tugas</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
